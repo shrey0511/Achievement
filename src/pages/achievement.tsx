@@ -10,13 +10,39 @@ function App() {
     infinite: true,
     speed: 600,
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   return (
     <div className='h-[100%] bg-[#ec3434] display-flex justify-center align-center  p-[35px] '>
       <div className="mt-[0px] text-center w-[100%]">
       <h1 className="text-[50px] text-white pt-[30px] font-header">Achievements</h1>
-      <Slider {...settings} className=" pt-20 w-[auto] h-[500px] display-flex ">
+      <Slider {...settings} className=" pt-20 w-[auto] h-[500px] ">
         {data.map((d) => (
           <div key={d.name} className="font-bodyTrad bg-[#D8D9DA] w-1/2 h-[auto] text-black rounded-xl hover:mt-[10px] transition-[0.2s] justify-center  items-center">
             <div className='h-[100%] bg-black flex justify-center items-center rounded-t-xl w-[100%]'>
