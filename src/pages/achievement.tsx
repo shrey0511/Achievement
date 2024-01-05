@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-function App() {
+function Achievements() {
   const settings = {
     dots: false,
     infinite: true,
@@ -91,4 +91,4 @@ const data = [
   
 ];
 
-export default App;
+export default Achievements;
